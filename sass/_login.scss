@@ -1,0 +1,188 @@
+.container {
+  @include flexBox(column);
+  min-height: 100vh;
+ 
+  @include sm{
+   @include boxFixed(100%, 20px);
+  }
+ 
+  @include md{
+   @include boxFixed(460px);
+  }
+ }
+ 
+ .header{
+  &__logo{
+   a{
+    display: inline-block
+   }
+ 
+   @include marginX;
+ 
+   @include sm{
+    width: percentage(164px / 320px);
+    margin-top: em(70px);
+    margin-bottom: em(45px);
+   }
+ 
+   @include md{
+    width: 230px;
+    margin-top: em(100px);
+    margin-bottom: em(50px);
+   }
+  }
+ }
+ 
+ .main{
+  flex-grow: 1;
+ }
+ 
+ //아웃라인 재설정
+ :focus{
+  outline: 0;
+ }
+ 
+ :focus-visible{
+  @include custumOutline;
+ }
+ 
+ //로그인폼
+ .loginForm{
+  legend{
+   @include a11y;
+  }
+ 
+  &__container{
+  @include flexBox(column);
+  }
+ }
+ 
+ .userEmail, .userPassword{
+  margin-bottom: em(10px);
+ }
+ 
+ .formControl{
+  &User{
+   border: 1px solid $secondary;
+   padding: em(9px);
+ 
+   &:focus-within{
+    border-color: $primary;
+   }
+  }
+ 
+  &__input{
+   width: 100%;
+   padding: em(5px);
+ 
+   &:focus{
+    outline: 0;
+    background-color: rgba($primary, 0.05);
+   }
+  }
+ 
+  &__input:focus-visible{
+   box-shadow: none;
+  }
+ }
+ 
+ .errorMessage{
+  color: $warning;
+  display: none;
+ }
+ 
+ .is--invalid{
+  .errorMessage{
+   display: block;
+  }
+ }
+ 
+ //로그인 상태유지 및 IP보안
+ .userSelectInfo{
+  order: 1;
+  @include flexBox;
+ }
+ 
+ .ipSecurityLink{
+  margin-left: auto;
+  text-decoration: none;
+  color: inherit;
+ }
+ 
+ //로그인 상태 유지
+ .loginState{
+ 
+  &__checkbox{ // a11y 사용 안됨 : a11y에 있는 clip 속성이 포커스되는 것을 방해
+   @include a11yFocus;
+  }
+ 
+  &__label{
+   @include flexBox(row, flex-start, center);
+   cursor: pointer;
+   
+   &::before{
+    content: '';
+    display: inline-block;
+    width: em(20px);
+    height: em(20px);
+    background: url(./../images/unchecked.svg) no-repeat;
+    background-size: cover;
+    margin-right: em(8px);
+   }
+  }
+ 
+   &__checkbox:checked + &__label::before{
+    background-image: url(./../images/checked.svg);
+   }
+ 
+   &__checkbox:focus + &__label::before{
+    @include custumOutline;
+   }
+ }
+ 
+ //보안 on off
+ .ipSecurity{
+ 
+  &__checkbox{ // a11y 사용 안됨 : a11y에 있는 clip 속성이 포커스되는 것을 방해
+   @include a11yFocus;
+  }
+ 
+  &__checkbox:checked + &__label::before{
+  content: 'ON';
+  color: $primary;
+  }
+
+  &__checkbox:focus + &__label::before{
+  @include custumOutline;
+  }
+ 
+  &__label{
+ 
+   &::before{
+    content: 'OFF';
+    font-weight: 700;
+    text-align: right;
+    display: inline-block;
+    width: em(36px);
+    padding: 0 em(4px);
+    margin-left: em(8px);
+    color: $secondary;
+    cursor: pointer;
+   }
+  }
+ }
+ 
+ //로그인 버튼
+ .loginButton{
+  margin: em(10px) 0;
+  background-color: $primary;
+  color: $default;
+ 
+  .formControl__button{
+   background-color: inherit;
+   color: inherit;
+   width: 100%;
+   padding: em(19px) em(16px);
+   cursor: pointer;
+  }
+ }
