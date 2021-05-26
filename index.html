@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>[쑨]을 소개합니다.</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="https://www.naver.com" target="_blank" rel="noopener noreferrer">
+          <img srcset="./images/logo.svg" src="./images/logo.png" alt="네이버">
+        </a>
+      </h1>
+    </header>
+    <nav class="menu">
+      <h2 class="a11yHidden">메뉴</h2>
+      <ul class="menu__list">
+        <li class="menu__list__item"><a href="./login.html" target="_blank">로그인 페이지<span class="line"></span></a></li>
+        <li class="menu__list__item"><a href="#" target="_blank">목록 게시판<span class="line"></span></a></li>
+        <li class="menu__list__item"><a href="#" target="_blank">이미지 게시판<span class="line"></span></a></li>
+        <li class="menu__list__item"><a href="#" target="_blank">비주얼 슬라이드<span class="line"></span></a></li>
+      </ul>
+      <div class="menu__button is-open" aria-label="메뉴 열기" title="메뉴 열기">
+        <a class="menu__button__line">
+          <span class="menu__button__lineTop"></span>
+          <span class="menu__button__lineCenter"></span>
+          <span class="menu__button__lineBottom"></span>
+        </a>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="main__visual">
+        <div class="main__visualSlide visualSlide01">
+          <div class="main__visualSlide__Item">
+           <div class="main__visualSlide__Item___textWrap">
+            <p class="main__visualSlide__Item___textTitle">W Solution</p>
+            <p class="main__visualSlide__Item___textContent">
+             <span>Contents 제작</span>
+             <span>온 · 오프라인 및 모바일 환경에서 다양하게 활용 가능한</span>
+             <span>교육용 영상 콘텐츠</span>
+            </p>
+           </div>
+           <div class="main__visualSlide__Item___img">
+            <img src="./images/치매--공격적요인.png" alt="공격적성향">
+           </div>
+          </div>
+        </div>
+        <div class="main__visualSlide visualSlide02">
+          <div class="main__visualSlide__Item">
+           <div class="main__visualSlide__Item___textWrap">
+            <p class="main__visualSlide__Item___textTitle">W Solution</p>
+            <p class="main__visualSlide__Item___textContent">
+             <span>Contents 제작</span>
+             <span>온 · 오프라인 및 모바일 환경에서 다양하게 활용 가능한</span>
+             <span>교육용 영상 콘텐츠</span>
+            </p>
+           </div>
+           <div class="main__visualSlide__Item___img">
+            <img src="./images/치매--공격적요인.png" alt="공격적성향">
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <div class="topLineTitle">
+          <h2 class="topLineTitle__title">
+              <span class="text">History</span>
+          </h2>
+          <div class="topLineTitle__content">
+              <p>경력정보를 확인 하실 수 있습니다.</p>
+          </div>
+        </div>
+        <ul class="history__list">
+          <li class="history__item">
+            <!-- aria-description은 추후 WAI-ARIA 1.3에 업데이트 될 속성입니다.  -->
+            <!-- 출처 : https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Annotations -->
+            <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
+              <figure class="history__companyLogo">
+                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption01" />
+                <figcaption class="history__caption" id="historyCaption01">백제직업전문학교</figcaption>
+              </figure>
+            </a>
+            <div hidden class="history__detail" role="dialog" aria-modal="false" aria-labelledby="historyDetailTitle01">
+              <h3 class="history__name" id="historyDetailTitle01">&#40;재&#41; 백제직업전문학교</h3>
+              <p class="history__description">포토샵, 일러스트, 플래시 등 디자인 프로그램 활용법 및 코딩 교육</p>
+              <ul class="history__ingredientList">
+                <li class="history__ingredientItem"><span class="history__ingredienName">입사일자</span><span class="history__ingredienValue">2012. 03. 05.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴사일자</span><span class="history__ingredientValue">2013. 02. 01.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">근무기간</span><span class="history__ingredientValue">11개월</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴직사유</span><span class="history__ingredientValue">교육원 사정으로 교육과정 폐강</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">직급/직책</span><span class="history__ingredientValue">강사/보조강사</span></li>
+              </ul>
+              <button type="button" class="buttonNone buttonClose" title="닫기" aria-label="이력정보 패널닫기" aria-describedby="historyDetailTitle01">
+                <!-- 버튼에 aria-label을 사용하면 버튼 객체의 이름은 aria-label 값으로만 인식되기 때문에 내부 span 요소에 aria-hidden 속성을 생략할 수 있음.-->
+                <span class="icon iconClose" aria-hidden="true"></span>
+              </button>
+            </div>
+          </li>
+          <li class="history__item">
+            <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
+              <figure class="history__companyLogo">
+                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption02" />
+                <figcaption class="history__caption" id="historyCaption02">ENTIX</figcaption>
+              </figure>
+            </a>
+            <div hidden class="history__detail" role="dialog" aria-modal="false" aria-labelledby="historyDetailTitle03">
+              <h3 class="history__name" id="historyDetailTitle02">ENTIX</h3>
+              <p class="history__description">디자인 프로그램을 활용한 웹 페이지 디자인 및 코딩(접근성, 웹표준)</p>
+              <ul class="history__ingredientList">
+                <li class="history__ingredientItem"><span class="history__ingredienName">입사일자</span><span class="history__ingredienValue">2013. 03. 07.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴사일자</span><span class="history__ingredientValue">2014. 04. 04.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">근무기간</span><span class="history__ingredientValue">13개월</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴직사유</span><span class="history__ingredientValue">다양한 경험을 위한 이직</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">직급/직책</span><span class="history__ingredientValue">사원</span></li>
+              </ul>
+              <button type="button" class="buttonNone buttonClose" title="닫기" aria-label="이력정보 패널닫기" aria-describedby="historyDetailTitle02">
+                <span class="icon iconClose" aria-hidden="true"></span>
+              </button>
+            </div>
+          </li>
+          <li class="history__item">
+            <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
+              <figure class="history__companyLogo">
+                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption03" />
+                <figcaption class="history__caption" id="historyCaption03">ENTIX</figcaption>
+              </figure>
+            </a>
+            <div hidden class="history__detail" role="dialog" aria-modal="false" aria-labelledby="historyDetailTitle03">
+              <h3 class="history__name" id="historyDetailTitle03">nineis</h3>
+              <p class="history__description">디자인 프로그램을 활용한 웹 페이지 디자인 및 코딩(접근성, 웹표준, 반응형)</p>
+              <ul class="history__ingredientList">
+                <li class="history__ingredientItem"><span class="history__ingredienName">입사일자</span><span class="history__ingredienValue">2014. 06. 16.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴사일자</span><span class="history__ingredientValue">2015. 02. 01.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">근무기간</span><span class="history__ingredientValue">7개월 2주</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴직사유</span><span class="history__ingredientValue">유산증상으로 인한 퇴사</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">직급/직책</span><span class="history__ingredientValue">사원</span></li>
+              </ul>
+              <button type="button" class="buttonNone buttonClose" title="닫기" aria-label="이력정보 패널닫기" aria-describedby="historyDetailTitle03">
+                <span class="icon iconClose" aria-hidden="true"></span>
+              </button>
+            </div>
+          </li>
+          <li class="history__item">
+            <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
+              <figure class="history__companyLogo">
+                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption04" />
+                <figcaption class="history__caption" id="historyCaption04">ENTIX</figcaption>
+              </figure>
+            </a>
+            <div hidden class="history__detail" role="dialog" aria-modal="false" aria-labelledby="historyDetailTitle04">
+              <h3 class="history__name" id="historyDetailTitle04">W Solution</h3>
+              <p class="history__description">디자인 프로그램을 활용한 웹 페이지 디자인 및 코딩(접근성, 웹표준, 반응형)</p>
+              <ul class="history__ingredientList">
+                <li class="history__ingredientItem"><span class="history__ingredienName">입사일자</span><span class="history__ingredienValue">2020. 03. 16.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴사일자</span><span class="history__ingredientValue">2021. 03. 22.</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">근무기간</span><span class="history__ingredientValue">12개월</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">퇴직사유</span><span class="history__ingredientValue">회사 경영상의 어려움으로 인한 퇴직</span></li>
+                <li class="history__ingredientItem"><span class="history__ingredientName">직급/직책</span><span class="history__ingredientValue">대리/연구원</span></li>
+              </ul>
+              <button type="button" class="buttonNone buttonClose" title="닫기" aria-label="이력정보 패널닫기" aria-describedby="historyDetailTitle04">
+                <span class="icon iconClose" aria-hidden="true"></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="license">
+        <div class="license__visual"></div>
+        <div class="license__list">
+            <div class="topLineTitle">
+                <h2 class="topLineTitle__title">
+                    <span class="text">License List</span>
+                </h2>
+            </div>
+            <div class="license__listBox">
+                <div class="license__list__item">
+                    <span class="license__list__itemName">웹디자인기능사</span>
+                    <span class="license__list__itemMinistry">산업인력관리공단</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">컴퓨터그래픽스 운용기능사</span>
+                    <span class="license__list__itemMinistry">산업인력관리공단</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">GTQ 그래픽기술자격 1급</span>
+                    <span class="license__list__itemMinistry">한국생산성본부</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">GTQ 그래픽기술자격 2급</span>
+                    <span class="license__list__itemMinistry">한국생산성본부</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">GTQ 그래픽기술자격 3급</span>
+                    <span class="license__list__itemMinistry">한국생산성본부</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">GTQ 일러스트 1급</span>
+                    <span class="license__list__itemMinistry">한국생산성본부</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">GTQ 일러스트 2급</span>
+                    <span class="license__list__itemMinistry">한국생산성본부</span>
+                </div>
+                <div class="license__list__item">
+                    <span class="license__list__itemName">GTQ 일러스트 3급</span>
+                    <span class="license__list__itemMinistry">한국생산성본부</span>
+                </div>
+            </div>
+            <div class="license--list_page page_link">
+                <a href="" class="page_link--link"><span class="page_link--page a11y_hidden">1</span></a>
+                <a href="" class="page_link--link"><span class="page_link--page a11y_hidden">2</span></a>
+            </div>
+        </div>
+      </div>
+      <div class="introduce">
+        <div class="introduce__text">
+            <h2 class="introduce__textTitle">
+                <span class="text">Delicious design</span>
+            </h2>
+            <div class="introduce__textContent">
+                <div><span>욕심 보다는 노력, </span><span>노력을 능력으로 바꾸는 힘!!</span></div>
+                <div><span>언제나 최선을 다해 </span><span>자신을, 그리고 일을 디자인합니다.</span></div>
+            </div>
+        </div>
+      </div>
+  <div class="footer">
+      <div class="footer__banner">
+          <div class="footer__banner__item footer__bannerEmail">
+              <a href="mailto:ssun995@kakao.com" class="footer__bannerLink">
+                  <span class="">E - maile</span>
+              </a>
+          </div>
+          <div class="footer__banner__item footer__bannerCall">
+              <a href="tel:+82-010-2915-2450" class="footer__bannerLink">
+                  <span class="">Call</span>
+              </a>
+          </div>
+      </div>
+      <div class="footer__info">
+          <a href="#" class="footer__info__logo">
+              <img src="./images/footer-logo-light.png" alt="ssun 로고 아이콘" title="첫 페이지 바로가기">
+          </a>
+          <span class="footer__info__copyright">&#169; 2021 Ssun</span>
+      </div>
+  </div>
+  </div>
+</body>
+</html>
