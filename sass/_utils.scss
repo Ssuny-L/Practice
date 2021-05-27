@@ -1,7 +1,7 @@
 $rootUnit: 16px !default; //rootUnit의 기본값은 16px이지만 지정된 값이 있다면 지정된 값으로 적용.
 $breakpoint: 768px; //테블릿 사이즈
 
-//@function : 블록가로 안의 연산값을 적용
+//@function : 블록 가로 안의 연산값을 적용
 @function removeUnit($value){
  @return ($value / ($value * 0 + 1)); //연산오류 방지를 위해 단위 삭제 (곱하기 핳 때 양쪽에 단위가 모두 있으면 에러가 남.)
 }
@@ -14,7 +14,7 @@ $breakpoint: 768px; //테블릿 사이즈
  @return (removeUnit($value / $base)) * 1em;
 }
 
-//@mixin : 블록가로 안의 내용(스타일)을 적용
+//@mixin : 블록 가로 안의 내용(스타일)을 적용
 @mixin clearfix {
  &::after{
   content: "";
@@ -81,6 +81,24 @@ $breakpoint: 768px; //테블릿 사이즈
  width: 1px;
  height: 1px;
  opacity: 0;
+}
+
+@mixin focus(){
+  &:focus{
+    outline: 0;
+    border-radius: 2px;
+    box-shadow: 0 0 0 2px rgba($outline, 1);
+  }
+}
+
+@mixin focusVisible($visible: true){
+  @include focus();
+  @if $visible{
+    &:not(:focus-visible){
+      box-shadow: none;
+      @content
+    }
+  }
 }
 
 @mixin custumOutline {

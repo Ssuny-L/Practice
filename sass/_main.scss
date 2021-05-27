@@ -1,0 +1,362 @@
+.container {
+  background-color: rgba($secondary, 0.3);
+
+  @include sm {
+    @include boxFixed(100%, 20px);
+  }
+
+  @include md {
+    @include boxFixed(100%, 14px);
+  }
+}
+
+//HEADER
+.header {
+  padding: em(20px) em(30px);
+  @include flexBox;
+  @include md {
+    @include boxFixed(1024px, 14px);
+  }
+
+  &__logo{
+    width: em(150px);
+  }
+
+  .menu{
+    margin-left: auto;
+
+    &__list{
+      display: none;
+    }
+
+    &__button{
+      display: block;
+      width: em(50px);
+      height: em(50px);
+      user-select: none;
+      overflow: hidden;
+
+      transition: all 300ms;
+
+      &__line{
+        display: block;
+
+        & span{
+          display: inline-block;
+          background-color: $text;
+          height: em(5px);
+          margin: em(5px) 0;
+        }
+
+        &Top{
+          width: 100%;
+
+          transition: all 300ms;
+        }
+
+        &Center{
+          width: 70%;
+
+          transition: all 300ms;
+        }
+        
+        &Bottom{
+          width: 100%;
+
+          transition: all 300ms;
+        }
+      }
+      &__line:hover{
+        cursor: pointer;
+
+        .menu__button__lineTop{
+          width: 70%;
+
+          transition: all 300ms;
+        }
+
+        .menu__button__lineCenter{
+          width: 100%;
+
+          transition: all 300ms;
+        }
+
+        .menu__button__lineBottom{
+          width: 70%;
+
+          transition: all 300ms;
+        }
+      }
+    }
+  }
+}
+
+//VISUAL
+.main__visual {
+  position: relative;
+  @include boxFull;
+}
+.main__visual .bx-wrapper {
+ margin: 0 auto;
+ text-align: center;
+ border: 0;
+ box-shadow: unset;
+}
+.visual-item_wrap {
+ background-repeat: no-repeat;
+ background-position: top center;
+ background-size: cover;
+}
+.visual-item_wrap.is-visual01 {background-image: url(../images/visual_bg01.png);}
+.visual-item_wrap.is-visual02 {background-image: url(../images/visual_bg02.png);}
+.visual-item_wrap.is-visual03 {background-image: url(../images/visual_bg03.png);}
+.visual-item_width {
+ margin: 0 auto;
+ @include flexBox(row, space-around);
+
+ @include sm{
+   @include boxFixed(100%, 14px);
+   height: em(600px);
+   flex-direction: column;
+   justify-content: flex-end;
+ }
+
+ @include md{
+   @include boxFixed(100%, 20px);
+   height: em(300px);
+ }
+}
+.main__visualSlide__item__textWrap{
+  @include sm{
+    @include boxFixed(420px, 14px);
+    padding-top: em(30px);
+    width: em(320px);
+    height: fit-content;
+  }
+
+  @include md{
+    @include boxFixed(100%, 20px);
+    padding-top: em(50px);
+    width: em(400px);
+  }
+}
+.main__visualSlide__item__img{
+  @include sm{
+    @include boxFixed(320px, 14px);
+    padding-top: em(30px);
+    width: em(320px);
+    padding-bottom: em(50px);
+  }
+
+  @include md{
+    @include boxFixed(100%, 20px);
+    width: em(300px);
+    padding-top: em(50px);
+  }
+  
+}
+.main__visualSlide__item__img.github{
+  padding-top: em(20px);
+}
+.visual_introduce {padding-top: em(50px);}
+.visual-item--text_wrap .visual-item--text,
+.visual-item--text_wrap .button {opacity: 0;}
+.visual-item_wrap[aria-hidden="false"] .visual-item--text,
+.visual-item_wrap[aria-hidden="false"] .button {opacity: 1;}
+.visual-item--text.is-text_big {
+ font-size: em(62px);
+ font-weight: 700;
+ padding: 0 0 37px 0;
+
+ transition: opacity .7s .4s;
+}
+.visual-item--text.is-text_middle {
+ font-size: em(16px);
+ line-height: em(28px);
+
+ transition: opacity .7s .5s;
+}
+.visual-item--text span {
+ display: block;
+ width: 100%;
+}
+.visual-item_width .button {transition: opacity .7s .6s;}
+.visual-item_wrap .visual-item--img img {transition: opacity 1s .5s; opacity: 0;}
+.visual-item_wrap[aria-hidden="false"] .visual-item--img img {opacity: 1; animation: updown 2.4s 1.2s infinite linear;} /*.10s = 1s*/
+
+.bx-wrapper {position: relative;}
+.bx-controls-direction {display: none;}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+  position: unset;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+@keyframes rotate {
+ 0% {transform: rotateX(0deg);}
+ 100% {transform: rotateX(360deg);}
+}
+@keyframes updown {
+ 0% {transform: translateY(0);}
+ 25% {transform: translateY(-10px);}
+ 75% {transform: translateY(10px);}
+ 100% {transform: translateY(0px);}
+}
+
+//HISTORY
+.topLineTitle{
+  &__title{
+    padding-bottom: 0.1em;
+    font-size: em(60px);
+
+    &::before{
+      content: '';
+      display: block;
+      width: em(56px);
+      height: em(2px);
+      background-color: rgba(255, 121, 0, 1);
+      margin-bottom: em(5px);
+    }
+  }
+}
+
+.history{
+  padding-top: em(100px);
+
+  @include md{
+    @include boxFixed(840px);
+  }
+  &__list{
+    list-style: none;
+    @include sm{
+      padding: 20px 20px 0 20px;
+      @include flexBox(column);
+    }
+    @include md{
+      padding: 30px 0 10px;
+      @include marginX;
+      @include flexBox(row, space-between, stretch, wrap);
+    }
+  }
+
+  &__item{
+    position: relative;
+    margin-bottom: 20px;
+
+    @include md{
+      width: 360px;
+    }
+  }
+
+  &__button{
+    text-decoration: none;
+    @include focusVisible;
+    // a 요소를 block으로 설정하여 부모 요소 박스의 크기만큼 확장
+    display: block;
+    color: grayscaleGray4;
+  }
+
+  // 이디야 음료 카드 (figure 요소) ----------------------------------------------------- /
+  &__thumbnail{
+    margin: 0;
+    padding: 20px 0 40px;
+    text-align: center;
+
+    //이미지에 마우스 오버시 초기 스케일이 0.85에서 1로 적용되도록 설정
+    img{
+      transform: scale(0.85);
+      transition: all 0.4s ease;
+
+      &:hover img {
+        transform: none;
+      }
+    }
+  }
+
+  // 이디야 음료 상세정보 --------------------------------------------------------------- /
+  &__detail{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid $secondary;
+    padding: 30px 20px;
+    background: rgba($white, 0.6);
+    transition: all 0.6s ease;
+
+    // 음료 카드 클릭 시 .beverage__detail 영역에 .is--active가 추가되도록 설정
+    &.is--active {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  // 이디야 음료 이름 ----------------------------------------------------------------- /
+  &__name{
+    display: block;
+    border-bottom: solid 2px $alpha;
+    padding-bottom: 10px;
+    font-size: rem(18px);
+    color: $alpha;
+  }
+
+  // 이디야 음료 영문 이름 (lang="en")
+  &__enName{
+    display: block;
+    font-size: rem(14px);
+    color: $secondary;
+  }
+
+  // 이디야 음료 설명 ----------------------------------------------------------------- /
+  &__description{
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+
+  // 이디야 음료 성분정보 목록 --------------------------------------------------------- /
+  &__ingredientList{
+    line-height: 1.6;
+    font-size: rem(13px);
+    padding: 30px 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    column-count: 2;
+    column-gap: 20px;
+    column-fill: auto;
+    column-rule: 1px solid $alpha;
+    background: $secondary;
+  }
+
+  // 이디야 음료 성분정보 아이템 ----------------------------------------------------------- /
+  &__ingredientItem{
+    @include flexBox(row, space-between, center, nowrap);
+  }
+  
+  // 이디야 음료 상세정보 패널 닫기 버튼 ------------------------------------------------------ /
+  .buttonClose{
+    @include focusVisible;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: all 0.3s ease;
+    color: $text;
+
+    &:hover{
+      background: $secondary;
+    }
+  }
+}

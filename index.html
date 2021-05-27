@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="./js/slide.js" charset="utf-8"></script>
   <link rel="stylesheet" href="./css/style.css">
   <title>[쑨]을 소개합니다.</title>
 </head>
@@ -12,60 +17,62 @@
     <header class="header">
       <h1 class="header__logo">
         <a href="https://www.naver.com" target="_blank" rel="noopener noreferrer">
-          <img srcset="./images/logo.svg" src="./images/logo.png" alt="네이버">
+          <img srcset="./images/SVG/logo.svg" src="./images/logo.png" alt="design">
         </a>
       </h1>
+      <nav class="menu">
+        <h2 class="a11yHidden">메뉴</h2>
+        <ul class="menu__list">
+          <li class="menu__list__item"><a href="./login.html" target="_blank">로그인 페이지<span class="line"></span></a></li>
+          <li class="menu__list__item"><a href="#" target="_blank">목록 게시판<span class="line"></span></a></li>
+          <li class="menu__list__item"><a href="#" target="_blank">이미지 게시판<span class="line"></span></a></li>
+          <li class="menu__list__item"><a href="#" target="_blank">비주얼 슬라이드<span class="line"></span></a></li>
+        </ul>
+        <div class="menu__button is-open" aria-label="메뉴 열기" title="메뉴 열기">
+          <a class="menu__button__line">
+            <span class="menu__button__lineTop"></span>
+            <span class="menu__button__lineCenter"></span>
+            <span class="menu__button__lineBottom"></span>
+          </a>
+        </div>
+      </nav>
     </header>
-    <nav class="menu">
-      <h2 class="a11yHidden">메뉴</h2>
-      <ul class="menu__list">
-        <li class="menu__list__item"><a href="./login.html" target="_blank">로그인 페이지<span class="line"></span></a></li>
-        <li class="menu__list__item"><a href="#" target="_blank">목록 게시판<span class="line"></span></a></li>
-        <li class="menu__list__item"><a href="#" target="_blank">이미지 게시판<span class="line"></span></a></li>
-        <li class="menu__list__item"><a href="#" target="_blank">비주얼 슬라이드<span class="line"></span></a></li>
-      </ul>
-      <div class="menu__button is-open" aria-label="메뉴 열기" title="메뉴 열기">
-        <a class="menu__button__line">
-          <span class="menu__button__lineTop"></span>
-          <span class="menu__button__lineCenter"></span>
-          <span class="menu__button__lineBottom"></span>
-        </a>
-      </div>
-    </nav>
     <main class="main">
       <div class="main__visual">
-        <div class="main__visualSlide visualSlide01">
-          <div class="main__visualSlide__Item">
-           <div class="main__visualSlide__Item___textWrap">
-            <p class="main__visualSlide__Item___textTitle">W Solution</p>
-            <p class="main__visualSlide__Item___textContent">
-             <span>Contents 제작</span>
-             <span>온 · 오프라인 및 모바일 환경에서 다양하게 활용 가능한</span>
-             <span>교육용 영상 콘텐츠</span>
-            </p>
-           </div>
-           <div class="main__visualSlide__Item___img">
-            <img src="./images/치매--공격적요인.png" alt="공격적성향">
-           </div>
+        <div class="slider">
+          <div class="main__visualSlide visualSlide01 visual-item_wrap">
+            <div class="main__visualSlide__item visual-item_width">
+              <div class="main__visualSlide__item__textWrap visual-item--text_wrap">
+                <p class="main__visualSlide__item__textTitle visual-item--text is-text_big">Sass</p>
+                <p class="main__visualSlide__item__textContent visual-item--text is-text_middle">
+                <span>css에 날개를 달다!</span>
+                <span>css 문법과 비슷하지만 변수사용으로 다양하고 폭 넓게</span>
+                <span>활용 가능합니다.</span>
+                </p>
+              </div>
+              <div class="main__visualSlide__item__img visual-item--img">
+                <img src="./images/sass_logo.png" alt="sass logo">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="main__visualSlide visualSlide02">
-          <div class="main__visualSlide__Item">
-           <div class="main__visualSlide__Item___textWrap">
-            <p class="main__visualSlide__Item___textTitle">W Solution</p>
-            <p class="main__visualSlide__Item___textContent">
-             <span>Contents 제작</span>
-             <span>온 · 오프라인 및 모바일 환경에서 다양하게 활용 가능한</span>
-             <span>교육용 영상 콘텐츠</span>
-            </p>
-           </div>
-           <div class="main__visualSlide__Item___img">
-            <img src="./images/치매--공격적요인.png" alt="공격적성향">
-           </div>
+          <div class="main__visualSlide visualSlide02 visual-item_wrap">
+            <div class="main__visualSlide__item  visual-item_width">
+            <div class="main__visualSlide__item__textWrap visual-item--text_wrap">
+              <p class="main__visualSlide__item__textTitle visual-item--text is-text_big">Github</p>
+              <p class="main__visualSlide__item__textContent visual-item--text is-text_middle">
+              <span>버전관리, 이젠 걱정마세요!</span>
+              <span>branch를 활용하여 프로젝트별, 업무별 버전관리가</span>
+              <span>편리해집니다.</span>
+              </p>
+            </div>
+            <div class="main__visualSlide__item__img visual-item--img github">
+              <img src="./images/github_logo.png" alt="github logo">
+            </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="history">
+      <div class="history beverage">
         <div class="topLineTitle">
           <h2 class="topLineTitle__title">
               <span class="text">History</span>
@@ -80,7 +87,7 @@
             <!-- 출처 : https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Annotations -->
             <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
               <figure class="history__companyLogo">
-                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption01" />
+                <img class="responsiveImg" src="./images/history_baekje.png" alt="" aria-labelledby="historyCaption01" />
                 <figcaption class="history__caption" id="historyCaption01">백제직업전문학교</figcaption>
               </figure>
             </a>
@@ -103,7 +110,7 @@
           <li class="history__item">
             <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
               <figure class="history__companyLogo">
-                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption02" />
+                <img class="responsiveImg" src="./images/history_entix.png" alt="" aria-labelledby="historyCaption02" />
                 <figcaption class="history__caption" id="historyCaption02">ENTIX</figcaption>
               </figure>
             </a>
@@ -125,7 +132,7 @@
           <li class="history__item">
             <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
               <figure class="history__companyLogo">
-                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption03" />
+                <img class="responsiveImg" src="./images/history_9is.png" alt="" aria-labelledby="historyCaption03" />
                 <figcaption class="history__caption" id="historyCaption03">ENTIX</figcaption>
               </figure>
             </a>
@@ -147,7 +154,7 @@
           <li class="history__item">
             <a class="history__button" href="#" role="button" aria-haspopup="dialog" aria-pressed="false" aria-description="버튼을 누르면 해당 경력에 대한 정보를 확인하실 수 있습니다.">
               <figure class="history__companyLogo">
-                <img class="responsiveImg" src="../images/iced-cherry-blossoms-latte.png" alt="" aria-labelledby="historyCaption04" />
+                <img class="responsiveImg" src="./images/history_dus.png" alt="" aria-labelledby="historyCaption04" />
                 <figcaption class="history__caption" id="historyCaption04">ENTIX</figcaption>
               </figure>
             </a>
@@ -227,26 +234,27 @@
             </div>
         </div>
       </div>
-  <div class="footer">
-      <div class="footer__banner">
-          <div class="footer__banner__item footer__bannerEmail">
-              <a href="mailto:ssun995@kakao.com" class="footer__bannerLink">
-                  <span class="">E - maile</span>
-              </a>
-          </div>
-          <div class="footer__banner__item footer__bannerCall">
-              <a href="tel:+82-010-2915-2450" class="footer__bannerLink">
-                  <span class="">Call</span>
-              </a>
-          </div>
-      </div>
-      <div class="footer__info">
-          <a href="#" class="footer__info__logo">
-              <img src="./images/footer-logo-light.png" alt="ssun 로고 아이콘" title="첫 페이지 바로가기">
-          </a>
-          <span class="footer__info__copyright">&#169; 2021 Ssun</span>
-      </div>
-  </div>
+    </main>
+    <div class="footer">
+        <div class="footer__banner">
+            <div class="footer__banner__item footer__bannerEmail">
+                <a href="mailto:ssun995@kakao.com" class="footer__bannerLink">
+                    <span class="">E - maile</span>
+                </a>
+            </div>
+            <div class="footer__banner__item footer__bannerCall">
+                <a href="tel:+82-010-2915-2450" class="footer__bannerLink">
+                    <span class="">Call</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <a href="#" class="footer__info__logo">
+                <img src="./images/footer-logo-light.png" alt="ssun 로고 아이콘" title="첫 페이지 바로가기">
+            </a>
+            <span class="footer__info__copyright">&#169; 2021 Ssun</span>
+        </div>
+    </div>
   </div>
 </body>
 </html>
